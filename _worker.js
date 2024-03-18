@@ -12,14 +12,12 @@ let addresses = [
 
 // 设置优选地址api接口
 let addressesapi = [
-    'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-addresses-api.txt' //可参考内容格式 自行搭建。
+    'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-address-api.txt' //可参考内容格式 自行搭建。
 ];
 
 let DLS = 5;//速度下限
 let addressescsv = [
-    // 'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-addresses.csv' //iptest测速结果文件。
-    'https://speed.cloudflare.com/__down?bytes=200000000',
-    // 'https://cdn.cloudflare.steamstatic.com/steam/apps/256843155/movie_max.mp4'
+    'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-addresses.csv' //iptest测速结果文件。
 ];
 
 let subconverter = "api.v1.mk"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
@@ -472,7 +470,7 @@ export default {
                 let worker_hosts = host.split(',');
                 let worker_uuids = uuid.split(',');
                 let workers = arraysToMap(worker_uuids,worker_hosts);
-                const result = [];
+                let result = [];
 
                 // 使用forEach方法遍历Map对象
                 workers.forEach((uuid, host) => {
@@ -536,7 +534,7 @@ export default {
 
                         return vlessLink;
                     });
-                    result.concat(vlessNodes);
+                    result = result.concat(vlessNodes);
                 });
                 responseBody = result.join('\n');
 
