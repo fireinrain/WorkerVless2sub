@@ -40,11 +40,11 @@
  - 修改 `addressesapi` 参数，在脚本中设置 `addressesapi` 变量为 **优选IP地址txt文件** 的 URL。例如：
 	```js
 	let addressesapi = [
-		'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/addressesapi.txt',
+		'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-address-api.txt',
  		'https://addressesapi.090227.xyz/CloudFlareYes',
 	];
 	```
-	可参考 [addressesapi.txt](https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-addresses-api.txt) 内容格式 自行搭建。
+	可参考 [addressesapi.txt](https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-address-api.txt) 内容格式 自行搭建。
 
 
 <details>
@@ -57,8 +57,7 @@
 	```js
 	let DLS = 4;//速度下限
 	let addressescsv = [
-		'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-addresses.csv',
- 		'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-addresses.csv',
+		'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-address.csv',
 	];
 	```
 	`DLS` 为要求满足的最低速度，不满足改数值以上的IP将不会添加至优选订阅内容。注意：不考虑单位，只看数值，请按照您的测速结果而定。
