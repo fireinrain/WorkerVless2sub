@@ -15,7 +15,7 @@ let addressesapi = [
     'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-addresses-api.txt' //可参考内容格式 自行搭建。
 ];
 
-let DLS = 6;//速度下限
+let DLS = 5;//速度下限
 let addressescsv = [
     // 'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/cf-spdt-addresses.csv' //iptest测速结果文件。
     'https://speed.cloudflare.com/__down?bytes=200000000',
