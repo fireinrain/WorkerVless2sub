@@ -311,7 +311,8 @@ export default {
         //避免在媒体平台传播
         if (userAgent.includes('telegram') || userAgent.includes('twitter') || userAgent.includes('miaoko')) {
             return new Response('Hello World!');
-        } else if (userAgent.includes('clash') || (format === 'clash' && !userAgent.includes('subconverter'))) {
+        }
+        else if (userAgent.includes('clash') || (format === 'clash' && !userAgent.includes('subconverter'))) {
             const subconverterUrl = `https://${subconverter}/sub?target=clash&url=${encodeURIComponent(request.url)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
 
             try {
