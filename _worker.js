@@ -44,7 +44,7 @@ let EndPS = '';//节点名备注内容
 
 let FileName = 'WorkerVless2sub';
 let SUBUpdateTime = 6;
-let total = 99;//PB
+let total = 25;//PB
 //let timestamp = now;
 let timestamp = 4102329600000;//2099-12-31
 
@@ -476,7 +476,7 @@ export default {
 
                 let worker_hosts = host.split(',');
                 let worker_uuids = uuid.split(',');
-                let workers = arraysToMap(worker_uuids,worker_hosts);
+                let workers = arraysToMap(worker_hosts,worker_uuids);
                 let result = [];
 
                 // 使用forEach方法遍历Map对象
