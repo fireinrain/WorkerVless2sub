@@ -398,8 +398,10 @@ export default {
 
             const worker_cluster = url.searchParams.has('cluster');
 
-            let responseBody = null
+            let responseBody = '';
             if (!worker_cluster) {
+                console.log('已关闭cluster模式');
+
                 responseBody = uniqueAddresses.map(address => {
                     let port = "443";
                     let addressid = address;
@@ -460,6 +462,8 @@ export default {
 
                     return vlessLink;
                 }).join('\n');
+                console.log("当前vless:"+responseBody);
+
             }
             if (worker_cluster && worker_cluster === true) {
                 //处理多个worker节点
@@ -467,6 +471,8 @@ export default {
                 //host 参数形式为: host=host1,host2,host3,host4,host5
                 //uuid 参数形式为: uuid=uuid1,uuid2,uuid3,uuid4,uuid5
                 //需要注意的是 host 和 uuid 需要一一对应，别对错了
+                console.log('已开启cluster模式');
+
                 let worker_hosts = host.split(',');
                 let worker_uuids = uuid.split(',');
                 let workers = arraysToMap(worker_uuids,worker_hosts);
@@ -537,6 +543,7 @@ export default {
                     result = result.concat(vlessNodes);
                 });
                 responseBody = result.join('\n');
+                console.log("当前vless:"+responseBody);
 
             }
 
