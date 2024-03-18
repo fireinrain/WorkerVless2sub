@@ -152,6 +152,6 @@
 
 Telegram交流群：[@Euler-Share](https://t.me/eulershare) [@CMLiussss](https://t.me/CMLiussss)
 # 感谢
-我自己的脑洞，[SAKURA-YUMI](https://github.com/SAKURA-YUMI)，[EzSync](https://github.com/EzSync)
+我自己的脑洞，[cmliu](https://github.com/cmliu), [SAKURA-YUMI](https://github.com/SAKURA-YUMI)，[EzSync](https://github.com/EzSync)
 
 
