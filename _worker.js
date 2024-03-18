@@ -7,7 +7,8 @@ let mytoken= 'auto';//快速订阅访问入口, 留空则不启动快速订阅
 let addresses = [
 	// 'icook.tw:2053#优选域名',
 	// 'cloudflare.cfgo.cc#优选官方线路',
-	'visa.com#优选官方线路',
+	'fwd.c.cf4.256800.xyz#优选线路1',
+	'visa.com#优选线路2'
 ];
 
 // 设置优选地址api接口
@@ -15,9 +16,11 @@ let addressesapi = [
 	'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt' //可参考内容格式 自行搭建。
 ];
 
-let DLS = 4;//速度下限
+let DLS = 6;//速度下限
 let addressescsv = [
-	'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/addressescsv.csv' //iptest测速结果文件。
+	// 'https://raw.githubusercontent.com/fireinrain/WorkerVless2sub/main/addressescsv.csv' //iptest测速结果文件。
+	'https://speed.cloudflare.com/__down?bytes=200000000',
+	// 'https://cdn.cloudflare.steamstatic.com/steam/apps/256843155/movie_max.mp4'
 ];
 
 let subconverter = "api.v1.mk"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
@@ -197,7 +200,7 @@ export default {
 			path = env.PATH || "/?ed=2048";
 			edgetunnel = env.ED || edgetunnel;
 			RproxyIP = env.RPROXYIP || RproxyIP;
-
+			//隐藏节点 应该是提取的chromego中的免费节点
 			const hasSos = url.searchParams.has('sos');
 			if (hasSos) {
 				const hy2Url = "https://hy2sub.pages.dev";
@@ -276,7 +279,7 @@ export default {
 				path = (path[0] === '/') ? path : '/' + path;
 			}
 		}
-
+		//避免在媒体平台传播
 		if (userAgent.includes('telegram') || userAgent.includes('twitter') || userAgent.includes('miaoko')) {
 			return new Response('Hello World!');
 		} else if (userAgent.includes('clash') || (format === 'clash' && !userAgent.includes('subconverter'))) {
