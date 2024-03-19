@@ -106,7 +106,7 @@
 
 ### 3. 自定义订阅-多节点模式
 
-- **自定义订阅格式** `https://[你的Workers域名]/sub?host=[你的Vless域名]&uuid=[你的UUID]&path=[你的ws路径]`
+- **自定义订阅格式** `https://[你的Workers域名]/sub?host=[你的Vless域名]&uuid=[你的UUID]&path=[你的ws路径]&sos=true&cluster=true`
 - **cluster**：开启多worker节点模式，例如 `cluster=true`
 - **host**：您的 VLESS 伪装域名(多个)，例如 `edgetunnel-2z2.pages.dev,your-worker-host2,your-worker-host3`；
 - **uuid**：您的 VLESS 客户端 UUID(多个)，例如 `30e9c5c8-ed28-4cd9-b008-dc67277f8b02,your-uuid2,your-uuid3`；
@@ -115,7 +115,7 @@
 
 - 自定义订阅地址如下：
   ```url
-  https://sub.cmliussss.workers.dev/sub?host=edgetunnel-2z2.pages.dev,your-worker-host2,your-worker-host3&uuid=30e9c5c8-ed28-4cd9-b008-dc67277f8b02,your-uuid2,your-uuid3&path=/?ed=2048
+  https://sub.cmliussss.workers.dev/sub?host=edgetunnel-2z2.pages.dev,your-worker-host2,your-worker-host3&uuid=30e9c5c8-ed28-4cd9-b008-dc67277f8b02,your-uuid2,your-uuid3&path=/?ed=2048&sos=true&cluster=true
   ```
 - 注意路径必须包含 "/sub"。
 - 注意多个host和多个uuid需要一一对应，不能对应错了，错了就连不上
