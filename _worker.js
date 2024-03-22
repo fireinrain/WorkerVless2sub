@@ -83,6 +83,7 @@ async function sendMessage(type, ip, add_data = "") {
     }
 }
 
+
 async function getAddressesapi() {
     if (!addressesapi || addressesapi.length === 0) {
         return [];
