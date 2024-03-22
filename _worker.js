@@ -207,7 +207,7 @@ export default {
         if (mytoken !== '' && url.pathname.includes(mytoken)) {
             host = env.HOST || "edgetunnel-2z2.pages.dev";
             uuid = env.UUID || "30e9c5c8-ed28-4cd9-b008-dc67277f8b02";
-            path = env.PATH || "/?ed=2048";
+            path = env.PATH || "/fireinrain";
             edgetunnel = env.ED || edgetunnel;
             RproxyIP = env.RPROXYIP || RproxyIP;
             //隐藏节点 应该是提取的chromego中的免费节点
@@ -303,7 +303,7 @@ export default {
             }
 
             if (!path || path.trim() === '') {
-                path = '/?ed=2048';
+                path = '/fireinrain';
             } else {
                 // 如果第一个字符不是斜杠，则在前面添加一个斜杠
                 path = (path[0] === '/') ? path : '/' + path;
